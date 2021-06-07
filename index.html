@@ -1,0 +1,94 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap CSS link-->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+
+    <!--Font Awesome link-->
+    <link rel="stylesheet" href="CSS/all.css">
+
+    <!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <title>Web Dev</title>
+    <style>
+        body {
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+            color: #616971;
+            }
+    </style>
+</head>
+<body>
+        <!--Start Navigation Bar-->
+        <div class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+            <h1 class="navbar-brand text-dark font-weight-bold display-4"
+				style="font-family: cursive;"><a style="text-decoration: none; color:rgba(0, 0, 0, 0.856);"><span><i class="fab fa-bootstrap text-danger px-1"></i>Bhargav's</span></a>
+            </h1>
+            <form action="">
+                <input type="text" placeholder="Ex. egg, beef" class="form-control w-50" id="searchBtn" style="position: absolute; right: 40px; top: 14px" required>
+                <button type="button" class="btn btn-primary myBtn" style="border-radius: 0%; position: absolute; right: 40px; top: 14px;"><i class="fa fa-search"></i></button>
+            </form>
+            
+
+        </div> 
+        <!--End Navigation-->
+
+        <!--Start Team-->
+        <div class="container pt-5">
+            <h1 class="text-center pt-5 pb-4 text-dark" style="font-weight: 400; border-bottom: 3px solid rgba(0, 0, 0, 0.226);">Find Meals For Your Ingrediants</h1>
+            <h2 class="text-center pt-2">Your Searches Results:</h2>
+        </div>
+        <div class="container-fluid mt-5">
+            <div class="teamContainer row justify-content-center">
+                
+            </div>
+        </div>  <!--End Team-->
+
+        
+    <!--Modal-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="card">
+            <div class="card-body text-center modals">
+                <i class="fas fa-quote-left fa-2x mb-3 text-danger"></i>
+                <h3>Welcome to Bhargav's Recipe</h3>
+                <p class="text-muted mt-3"><strong class="pr-2">NOTE:</strong>If you wanted to see all the recipe just click on the search button without writing anything.</p>
+                <p class="mt-2">If you find any problem just refresh the page THANKYOU</p>
+                <i class="fas fa-star mr-1 text-danger"></i><i class="fas fa-star mr-1 text-danger"></i><i class="fas fa-star mr-1 text-danger"></i><i class="far fa-star mb-4 text-danger"></i>
+                <img src="images/bhargav.jpg" class="img-fluid d-block mx-auto w-25 mb-1">
+                <p class="font-weight-bold">Bhargav Sonagara</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Script Source Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> 
+    </script>
+      
+    <script type="text/javascript">
+     $(document).ready(function() {
+         if (sessionStorage.getItem('#myModal') !== 'true') {
+             $('#myModal').modal('show');
+             sessionStorage.setItem('#myModal','true');     
+         }
+     });
+    </script>
+	<!-- jQuery -->
+	<script src="js/jquery-3.5.1.js"></script>
+	<!-- Bootstrap 4.5 JS -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Popper JS -->
+	<script src="js/popper.js"></script>
+  <!--Custom JavaScript Link-->
+  <script src="api.js"></script>
+
+	<!-- End Script Source Files -->
+    
+</body>
+</html>
